@@ -3,21 +3,21 @@ module.exports = {
 	parserOptions: {
 		ecmaVersion: 2020,
 		sourceType: 'module',
-		projects: ['./tsconfig.json']
+		projects: ['./tsconfig.json'],
 	},
 	settings: {
 		react: {
-			version: 'detect'
-		}
+			version: 'detect',
+		},
 	},
 	extends: [
 		'plugin:react/recommended',
 		'plugin:react-hooks/recommended',
 		'plugin:import/warnings',
 		'plugin:import/typescript',
-		'plugin:eslint-comments/recommended'
+		'plugin:eslint-comments/recommended',
 	],
-	plugins: ['simple-import-sort'],
+	plugins: ['simple-import-sort', 'import'],
 	rules: {
 		quotes: ['off', 'single'],
 		indent: ['warn', 'tab'],
@@ -41,6 +41,6 @@ module.exports = {
 		'import/newline-after-import': 'error',
 		'import/no-duplicates': 'error',
 
-		'react-hooks/exhaustive-deps': 'off'
-	}
+		'react-hooks/exhaustive-deps': 'off',
+	},
 }

@@ -4,12 +4,12 @@ import { FC } from 'react'
 
 import style from './Layout.module.scss'
 
-export const Layout: FC = ({ children }) => {
+export const Layout: FC = ({children}) => {
 	return (
 		<div className={style.wrap}>
-			<Header />
+			<Header/>
 			<div className={style.content}>{children}</div>
-			<Footer />
+			<Footer/>
 		</div>
 	)
 }

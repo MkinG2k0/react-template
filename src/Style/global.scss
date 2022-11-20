@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@use '../Style/mix';
 
 body {
 	color: white;
@@ -10,4 +8,22 @@ body {
 * {
 	padding: 0;
 	margin: 0;
+}
+
+*::-webkit-scrollbar {
+	width: 10px; /* ширина scrollbar */
+}
+
+*::-webkit-scrollbar-track {
+	background: transparent; /* цвет дорожки */
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: #bbbbbf; /* цвет плашки */
+	//border-top: 0.4rem solid color.$color-gray;
+	//border-bottom: 0.4rem solid color.$color-gray;
+}
+
+a {
+	color: white;
 }

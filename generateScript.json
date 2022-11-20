@@ -11,6 +11,20 @@
         "./templates/slice/FileName.Slice.ts",
         "./templates/slice/FileName.Thunk.ts"
       ]
+    },
+    "comp": {
+      "folder": "./src/Components",
+      "files": [
+        "./templates/comp/FileName.tsx",
+        "./templates/comp/FileName.module.scss"
+      ]
+    },
+    "page": {
+      "folder": "./src/Pages",
+      "files": [
+        "./templates/page/FileName.tsx",
+        "./templates/page/FileName.module.scss"
+      ]
     }
   }
 }
