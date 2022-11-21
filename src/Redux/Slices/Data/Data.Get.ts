@@ -1,4 +1,3 @@
 import { useStore } from 'Redux/Store/Redux.hooks'
 
-export const GetData = () => useStore(({Data}) => Data)
-
+export const GetData = () => useStore((state) => state)['Data']
