@@ -17,4 +17,3 @@ export const extraReducers = {
 		state.data.data = action.payload
 	}
 }
-

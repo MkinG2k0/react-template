@@ -14,4 +14,3 @@ const slice = createSlice({
 export const { reducerExample } = slice.actions
 
 export const Data = slice.reducer
-

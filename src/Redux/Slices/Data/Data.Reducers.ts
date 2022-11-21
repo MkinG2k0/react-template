@@ -7,4 +7,3 @@ export const reducers = {
 		state.data.data = action.payload
 	}
 }
-

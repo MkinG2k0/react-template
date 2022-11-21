@@ -13,13 +13,13 @@ import { components } from './Routes'
 export function App() {
 	return (
 		<Provider store={store}>
-			<PersistGate persistor={persist} loading={<Loader/>}>
+			<PersistGate persistor={persist} loading={<Loader />}>
 				<BrowserRouter>
 					<Layout>
-						<Suspense fallback={<Loader/>}>
+						<Suspense fallback={<Loader />}>
 							<Routes>
-								{components.map(({path, Component}) => (
-									<Route key={path} path={path} element={<Component/>}/>
+								{components.map(({ path, Component }) => (
+									<Route key={path} path={path} element={<Component />} />
 								))}
 							</Routes>
 						</Suspense>

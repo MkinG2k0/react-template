@@ -32,5 +32,3 @@ export const store = configureStore({
 })
 
 export const persist = persistStore(store)
-
-export type RootReducerType = typeof rootReducer
