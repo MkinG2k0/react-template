@@ -8,5 +8,5 @@ const GetData = (data: Q_Data.Info): Req<R_Data.Info> =>
 	http.post(path_data, data)
 
 export const Data = {
-	GetData
+	GetData,
 }

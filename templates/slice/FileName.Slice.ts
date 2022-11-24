@@ -8,10 +8,9 @@ const slice = createSlice({
 	name: 'FileName',
 	initialState,
 	reducers,
-	extraReducers
+	extraReducers,
 })
 
 export const { reducerExample } = slice.actions
 
 export const FileName = slice.reducer
-

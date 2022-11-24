@@ -8,7 +8,7 @@ const slice = createSlice({
 	name: 'Data',
 	initialState,
 	reducers,
-	extraReducers
+	extraReducers,
 })
 
 export const { reducerExample } = slice.actions

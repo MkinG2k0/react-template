@@ -11,9 +11,9 @@ export const extraReducers = {
 		setStatus(state.data, action, 'rejected'),
 	[fetchExample.fulfilled.type]: (
 		state: DataModel,
-		action: PayloadAction<string>
+		action: PayloadAction<string>,
 	) => {
 		setStatus(state.data, action, 'fulfilled')
 		state.data.data = action.payload
-	}
+	},
 }
