@@ -21,6 +21,7 @@ module.exports = {
 	rules: {
 		quotes: ['off', 'single'],
 		indent: ['warn', 'tab'],
+		'comma-dangle': [1, 'always-multiline'],
 		'no-unused-vars': 'off',
 
 		'react/prop-types': 'off',

@@ -9,6 +9,6 @@ export default defineConfig({
 		svgr({
 			exportAsDefault: true,
 		}),
-		tsconfigPaths()],
+		tsconfigPaths(),
+	],
 })
-
