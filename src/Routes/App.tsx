@@ -7,8 +7,7 @@ import { Provider } from 'react-redux'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { persist, store } from 'Redux/Store/store'
 import { PersistGate } from 'redux-persist/integration/react'
-
-import { components } from './Routes'
+import { components } from 'Routes/Routes'
 
 export function App() {
 	return (

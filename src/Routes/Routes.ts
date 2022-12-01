@@ -1,17 +1,17 @@
 import { lazy } from 'react'
 
-export const ROUTES = {
+export const NAV = {
 	MAIN: '/',
 	ANY: '/any',
 }
 
 export const components = [
 	{
-		path: ROUTES.MAIN,
+		path: NAV.MAIN,
 		Component: lazy(() => import('Pages/Main/Main')),
 	},
 	{
-		path: ROUTES.ANY,
+		path: NAV.ANY,
 		Component: lazy(() => import('Pages/AnyPage/AnyPage')),
 	},
 ]
