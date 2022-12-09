@@ -11,6 +11,6 @@ const slice = createSlice({
 	extraReducers,
 })
 
-export const { reducerExample } = slice.actions
+export const { setFileName } = slice.actions
 
 export const FileName = slice.reducer

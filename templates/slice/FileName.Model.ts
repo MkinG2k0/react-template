@@ -1,3 +1,3 @@
 export interface FileNameModel {
-	data: IStatus<string>
+	data: IStatus<any>
 }

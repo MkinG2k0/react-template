@@ -2,14 +2,14 @@ import { setStatus } from '@ReduxHelper'
 import { PayloadAction } from '@reduxjs/toolkit'
 
 import { FileNameModel } from './FileName.Model'
-import { fetchExample } from './FileName.Thunk'
+import { fetchFileName } from './FileName.Thunk'
 
 export const extraReducers = {
-	[fetchExample.pending.type]: (state: FileNameModel, action) =>
+	[fetchFileName.pending.type]: (state: FileNameModel, action) =>
 		setStatus(state.data, action, 'pending'),
-	[fetchExample.rejected.type]: (state: FileNameModel, action) =>
+	[fetchFileName.rejected.type]: (state: FileNameModel, action) =>
 		setStatus(state.data, action, 'rejected'),
-	[fetchExample.fulfilled.type]: (
+	[fetchFileName.fulfilled.type]: (
 		state: FileNameModel,
 		action: PayloadAction<string>,
 	) => {

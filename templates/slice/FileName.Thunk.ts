@@ -1,7 +1,7 @@
 import { Error } from '@ReduxHelper'
 import { createAsyncThunk } from '@reduxjs/toolkit'
 
-export const fetchExample = createAsyncThunk<
+export const fetchFileName = createAsyncThunk<
 	string,
 	void,
 	{ rejectValue: string }
