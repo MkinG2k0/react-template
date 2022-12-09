@@ -1,4 +1,6 @@
-@use '../Style/mix';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 body {
 	color: white;
