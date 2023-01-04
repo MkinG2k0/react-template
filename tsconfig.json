@@ -14,9 +14,6 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "types": [
-      "node",
-      "jest",
-      "@testing-library/jest-dom"
     ],
     "lib": [
       "DOM",

@@ -25,6 +25,10 @@ interface ID {
 	id: TID
 }
 
+interface setErrorProp {
+	(state: IStatus<any>, action: any, status: TStatus): void
+}
+
 enum HttpStatus {
 	CONTINUE = 100,
 	SWITCHING_PROTOCOLS = 101,

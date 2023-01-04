@@ -1,7 +1,3 @@
-export interface setErrorProp {
-	(state: IStatus<any>, action: any, status: TStatus): void
-}
-
 export const setStatus: setErrorProp = (state, action, status) => {
 	state.status = status
 	if (status === 'rejected') state.error = action?.payload
