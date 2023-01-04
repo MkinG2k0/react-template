@@ -1,5 +1,7 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
-import { Data } from 'Redux/Slices/Data/Data.Slice'
+import { setupListeners } from '@reduxjs/toolkit/query'
+import { Auth } from 'Redux/Slices/Auth/Auth.Slice'
+import { BaseApi } from 'Redux/Store/BaseApi'
 import {
 	FLUSH,
 	PAUSE,
@@ -12,7 +14,10 @@ import {
 } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
-const rootReducer = combineReducers({ Data })
+const rootReducer = combineReducers({
+	[BaseApi.reducerPath]: BaseApi.reducer,
+	Auth,
+})
 
 const persistConfig = {
 	key: 'root',
@@ -30,5 +35,7 @@ export const store = configureStore({
 			},
 		}).concat(),
 })
+
+setupListeners(store.dispatch)
 
 export const persist = persistStore(store)

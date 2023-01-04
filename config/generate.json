@@ -1,0 +1,24 @@
+{
+  "templates": {
+    "page": {
+      "template": "templates/page",
+      "generate": "src/Pages"
+    },
+    "comp": {
+      "template": "templates/comp",
+      "generate": "src/Components"
+    },
+    "page-comp": {
+      "template": "templates/page",
+      "generate": "src/Pages/*/Components"
+    },
+    "slice": {
+      "template": "templates/slice",
+      "generate": "src/Redux/Slices"
+    },
+    "api": {
+      "template": "templates/api",
+      "generate": "src/Redux/Api"
+    }
+  }
+}

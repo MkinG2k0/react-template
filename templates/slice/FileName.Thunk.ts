@@ -1,5 +1,5 @@
-import { Error } from '@ReduxHelper'
 import { createAsyncThunk } from '@reduxjs/toolkit'
+import { Error } from 'Utils/Redux'
 
 export const fetchFileName = createAsyncThunk<
 	string,

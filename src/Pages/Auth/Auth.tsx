@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
-import { NAV } from 'Routes/Routes'
+import { NAV } from 'Routes/Navigation'
 
-function AnyPage() {
+function Auth() {
 	return (
 		<div>
 			AnyPage <NavLink to={NAV.MAIN}>Main</NavLink>
@@ -9,4 +9,4 @@ function AnyPage() {
 	)
 }
 
-export default AnyPage
+export default Auth

@@ -1,5 +1,5 @@
-import { setStatus } from '@ReduxHelper'
 import { PayloadAction } from '@reduxjs/toolkit'
+import { setStatus } from 'Utils/Redux'
 
 import { FileNameModel } from './FileName.Model'
 import { fetchFileName } from './FileName.Thunk'

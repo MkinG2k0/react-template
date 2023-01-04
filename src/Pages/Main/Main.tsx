@@ -1,10 +1,14 @@
+import { CompInMain } from 'Pages/Main/components/CompInMain/CompInMain'
 import { NavLink } from 'react-router-dom'
-import { NAV } from 'Routes/Routes'
+import { NAV } from 'Routes/Navigation'
 
 function Main() {
 	return (
 		<div>
-			Main Page <NavLink to={NAV.ANY}>Nav Any page</NavLink>
+			<div>
+				Main Page <NavLink to={NAV.AUTH}>Nav Auth </NavLink>
+			</div>
+			<CompInMain />
 		</div>
 	)
 }

@@ -23,9 +23,6 @@
       "ESNext"
     ],
     "paths": {
-      "@ReduxHelper": [
-        "Redux/Helper/Helper"
-      ]
     }
   },
   "include": [

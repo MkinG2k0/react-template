@@ -1,5 +1,7 @@
 # Template
 
+Stack
+
 * TS
 * React
 * React-Router-Dom
@@ -10,3 +12,5 @@
 * Eslint
 * Prettier
 * Axios
+* PostCss
+* TailWind
