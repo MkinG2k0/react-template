@@ -1,8 +1,9 @@
 import { FC } from 'react'
-import style from 'templates/page/FileName.module.scss'
+
+import style from './FileName.module.scss'
 
 const FileName: FC = () => {
-	return <div className={style.wrap}>TemplateName</div>
+	return <div className={style.wrap}>FileName</div>
 }
 
 export default FileName

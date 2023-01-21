@@ -10,4 +10,8 @@ export const Pages = [
 		path: NAV.AUTH,
 		Component: lazy(() => import('Pages/Auth/Auth')),
 	},
+	{
+		path: NAV.NEST_PAGE,
+		Component: lazy(() => import('Pages/Main/Pages/NestPage/NestPage')),
+	},
 ]

@@ -12,6 +12,10 @@
       "template": "templates/page",
       "generate": "src/Pages/*/Components"
     },
+    "nest-page": {
+      "template": "templates/page",
+      "generate": "src/Pages/*/Pages"
+    },
     "slice": {
       "template": "templates/slice",
       "generate": "src/Redux/Slices"
