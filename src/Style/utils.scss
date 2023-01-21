@@ -1,0 +1,17 @@
+$gap: gap-3;
+
+.row {
+	@apply flex gap-3 flex-wrap;
+}
+
+.col {
+	@apply flex gap-3 flex-wrap flex-col;
+}
+
+.w100 {
+	@apply w-[100%];
+}
+
+.h100 {
+	@apply h-[100%];
+}

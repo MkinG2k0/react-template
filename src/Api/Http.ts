@@ -1,7 +1,16 @@
+import { Auth } from 'Api/EndPoints/Auth'
+import { AuthRoute } from 'Api/Routes'
 import axios from 'axios'
-import { History } from 'Routes/History'
+import { NOT_AUTHORIZED_CODE } from 'Constant/Auth'
 import { NAV } from 'Routes/Navigation'
-import { getToken, setToken } from 'Utils/Auth'
+import {
+	getRefToken,
+	getToken,
+	removeRefToken,
+	removeToken,
+	setRefToken,
+} from 'Utils/Auth'
+import { navigate } from 'Utils/Navigation'
 
 export const http = axios.create({
 	baseURL: import.meta.env.VITE_BASE_URL,
@@ -16,9 +25,8 @@ http.interceptors.request.use(
 	(config) => {
 		const token = getToken()
 
-		config.headers = {
-			...config.headers,
-			Authorization: `Bearer ${token}`,
+		if (token) {
+			config.headers['Authorization'] = `Bearer ${token}`
 		}
 
 		return config
@@ -27,17 +35,21 @@ http.interceptors.request.use(
 )
 
 http.interceptors.response.use(
-	(response) => {
-		return response
-	},
+	(response) => response,
 	(error) => {
-		if (
-			(error.response && error.response.status === 401) ||
-			(error.response && error.response.status === 403) ||
-			(error.response && error.response.data.message === 'NOT_AUTHORIZED')
-		) {
-			setToken('')
-			History.push(NAV.AUTH)
+		if (error.config.url === AuthRoute.refresh) {
+			removeRefToken()
+			removeToken()
+			navigate(NAV.AUTH)
+		}
+
+		if (NOT_AUTHORIZED_CODE.includes(error.response.status)) {
+			const refreshToken = getRefToken()
+			if (refreshToken) {
+				Auth.refresh({ refreshToken }).then(({ data }) => {
+					setRefToken(data.refresh)
+				})
+			}
 		}
 
 		return Promise.reject(error)

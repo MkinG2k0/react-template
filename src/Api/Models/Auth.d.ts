@@ -13,5 +13,8 @@ declare namespace R_Auth {
 		token: string
 	}
 
-	interface Refresh {}
+	interface Refresh {
+		token: string
+		refresh: string
+	}
 }

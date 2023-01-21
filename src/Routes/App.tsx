@@ -1,5 +1,6 @@
 import 'Style/font.scss'
 import 'Style/global.scss'
+import 'Style/utils.scss'
 
 import { Layout } from 'Components/Layout/Layout'
 import { FC, Suspense } from 'react'
